@@ -4,10 +4,11 @@ class Cylinder {
         this.height = height;
     }
 
-    getVolume() {
+    calculateVolume() {
         return (Math.PI * Math.pow(this.radius, 2) * this.height).toFixed(4);
     }
 }
 
 let cylinder = new Cylinder(5, 10);
-console.log(cylinder.getVolume()); // Output: Volume with 4 decimal places
+console.log(`Volume of the cylinder: ${cylinder.calculateVolume()} cubic units`);
+
