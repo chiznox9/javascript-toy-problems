@@ -1,17 +1,8 @@
-function speedDetector() {
-    let speed = prompt("Enter the car speed:");
-    speed = parseInt(speed);
-    let points = 0;
-
-    if (speed <= 70) {
-        console.log("Ok");
-    } else {
-        points = Math.floor((speed - 70) / 5);
-        if (points > 12) {
-            console.log("License suspended");
-        } else {
-            console.log(`Points: ${points}`);
-        }
-    }
+function checkSpeed(speed) {
+    if (speed < 70) return "Ok";
+    
+    let points = Math.floor((speed - 70) / 5);
+    return points > 12 ? "License suspended" : `Points: ${points}`;
 }
 
+console.log(checkSpeed(80)); // Output: Points: 2

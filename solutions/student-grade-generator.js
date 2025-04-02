@@ -1,6 +1,5 @@
 function getGrade() {
-    let marks = prompt("Enter student marks between 0 and 100:");
-    marks = parseInt(marks);
+    let marks = parseInt(prompt("Enter student marks between 0 and 100:"));
 
     if (marks >= 80 && marks <= 100) {
         console.log("Grade: A");
@@ -16,3 +15,5 @@ function getGrade() {
         console.log("Invalid marks. Please enter a value between 0 and 100.");
     }
 }
+
+getGrade();
